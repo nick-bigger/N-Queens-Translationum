@@ -1,0 +1,12 @@
+[package]
+name = "n-queens-validator"
+version = "0.1.0"
+edition = "2018"
+
+[[bin]]
+name = "rust"
+path = "rust.rs"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]

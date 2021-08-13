@@ -16,19 +16,62 @@ NOTE: None of these are perfect, I am aware that [there are more efficient ways 
 
 ```zsh
 # Go
-go run go.go <n>
+go run go.go <N>
+```
 
+```zsh
 # Java
 javac java.java
-java java 4
+java java <N>
+```
 
+```zsh
 # Python3
-> python3 python.py <n>
+python3 python.py <N>
+```
 
+```zsh
 # Ruby
-ruby ruby.rb <n>
+ruby ruby.rb <N>
+```
 
+```zsh
 # Rust
 cargo build
-cargo run <n>
+cargo run <N>
+```
+
+## Psuedocode
+
+``` text
+get the value of N from Command Line Args
+
+create empty list of results
+create empty N x N board
+
+solve(row) starting at first row
+
+print the result list
+
+
+solve(row):
+    if N valid Queens have been placed
+		add this board to the result list
+    else
+        for each square in this row
+            place a queen at this position
+            if this board is valid
+                solve(the next row)
+            remove the queen from this position
+
+
+board_is_valid():
+    yes if the number of conflicts() is 0
+
+
+conflicts():
+    count the number of row conflicts
+    count the number of column conflicts
+    count the number of diagonal conflicts
+    count the number of reverse diagonal conflicts
 ```
